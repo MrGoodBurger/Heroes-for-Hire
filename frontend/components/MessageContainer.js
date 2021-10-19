@@ -3,12 +3,15 @@
 import React from "react";
 import { View, Text, Button} from 'react-native';
 
-const MessageContainer = () => {
+
+const MessageContainer = (contracts) => {
+    console.log(contracts)
     return(
         <View>
-            <View></View>
-            <Text></Text>
-            <Button />
+            <Text>{contracts.contracts.name}</Text>
+            <Text>{contracts.contracts.summary}</Text>
+            <Button
+            title="Open" />
         </View>
     )
 }

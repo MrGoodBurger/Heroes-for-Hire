@@ -7,7 +7,8 @@
 
 import React from "react";
 import Header from "./Header";
-
+import { View } from "react-native";
+import Body from "./Body";
 
 const Landing = () => {
     return(

@@ -8,6 +8,7 @@
 
 import React from "react";
 import { View, Text, Image } from "react-native";
+import UpdateContract from "./UpdateContract";
 
 const Message = () => {
     return(
@@ -15,6 +16,10 @@ const Message = () => {
             <Image></Image>
             <Text></Text>
             <Text></Text>
+            <View>
+                <UpdateContract
+                id ={id}/>
+            </View>
         </View>
 
     );
