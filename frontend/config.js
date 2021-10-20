@@ -1,6 +1,8 @@
-import { initializeApp } from "@firebase/app";
+import { initializeApp, firebase } from "@firebase/app";
 import { getFirestore } from "@firebase/firestore";
- 
+// import firebaseui from "firebaseui";
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyBDZciYdKfQQcMG8aDwq0lfjRmBNKsViaw",
     authDomain: "heroesforhire-8e366.firebaseapp.com",
@@ -10,6 +12,18 @@ const firebaseConfig = {
     appId: "1:717058021461:web:5f005e4e7a0b69b5405cdc",
     measurementId: "G-MMZ72MCBK4"
   };
+
+
+  // var ui = new firebaseui.auth.AuthUI(firebaseui());
+
+  // ui.start('#firebaseui-auth-container', {
+  //   signInOptions: [
+  //     {
+  //       provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+  //       SignInMethod: firebase.auth.EmailAuthProvider.EMAIL_LINK_SIGN_IN_METHOD
+  //     }
+  //   ],
+  // });
 
   const app = initializeApp(firebaseConfig)
 
