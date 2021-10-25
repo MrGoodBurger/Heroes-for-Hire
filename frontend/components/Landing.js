@@ -7,18 +7,32 @@
 
 import React from "react";
 import Header from "./Header";
-import { View } from "react-native";
+import { Button, TouchableOpacity, View, StyleSheet } from "react-native";
 import Body from "./Body";
+import { useNavigation } from "@react-navigation/native";
 
-const Landing = () => {
+const Landing = ({ navigation }) => {
     return(
-        <View>
-            <Header
-            />
+        <View style={styles.container}>
             <Body
             />
+            <View>
+                <Button
+                title="Create Contract"
+                onPress={() => navigation.navigate('Create Contract')}
+                />
+            </View>
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+container:{
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#262626',
+},
+})
 
 export default Landing;

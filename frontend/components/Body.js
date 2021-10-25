@@ -23,18 +23,15 @@ const Body = () => {
       ;}
         getContracts();
     }, []);
-
+    console.log(contracts)
     return(
         <View>
-            {contracts.map((contracts, idx) => {
+            {contracts.map((contract, idx) => {
                 return(
                         <MessageContainer
-                        contracts={contracts} key={idx}/>
+                        contract={contract} key={idx} id={contract.id}/>
                 )
             })}
-            {/* <Button
-            title="Create New Contract?"
-            onPress */}
         </View>
         
     );

@@ -7,6 +7,7 @@ import Login from './components/Login';
 import Landing from './components/Landing';
 import Message from './components/Message';
 import SignUp from './components/SignUp';
+import CreateContract from './components/CreateContract';
 
 
 const Stack = createNativeStackNavigator();
@@ -17,9 +18,10 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Login" component={Login}/>
-        <Stack.Screen name="SignUp" component={SignUp}/>
+        <Stack.Screen name="Register" component={SignUp}/>
         <Stack.Screen name="Home"  component={Landing}/>
         <Stack.Screen name="Contract" component={Message}/>
+        <Stack.Screen name="Create Contract" component={CreateContract}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

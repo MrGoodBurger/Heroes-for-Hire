@@ -1,5 +1,7 @@
-import { initializeApp, firebase } from "@firebase/app";
+import firebase from 'firebase/app'
+import { initializeApp } from "@firebase/app";
 import { getFirestore } from "@firebase/firestore";
+import { getMessaging, getToken } from "firebase/messaging";
 // import firebaseui from "firebaseui";
 
 
@@ -14,17 +16,8 @@ const firebaseConfig = {
   };
 
 
-  // var ui = new firebaseui.auth.AuthUI(firebaseui());
 
-  // ui.start('#firebaseui-auth-container', {
-  //   signInOptions: [
-  //     {
-  //       provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
-  //       SignInMethod: firebase.auth.EmailAuthProvider.EMAIL_LINK_SIGN_IN_METHOD
-  //     }
-  //   ],
-  // });
-
-  const app = initializeApp(firebaseConfig)
+const app = initializeApp(firebaseConfig)
+  // export const auth = firebase.auth();
 
   export const db = getFirestore(app);

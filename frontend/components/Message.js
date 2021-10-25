@@ -9,8 +9,11 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
 import UpdateContract from "./UpdateContract";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-const Message = () => {
+const Message = ({ route }) => {
+    const { id } = route.params;
     return(
         <View>
             <Image></Image>
